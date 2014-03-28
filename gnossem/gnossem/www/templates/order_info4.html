@@ -1,0 +1,45 @@
+<content >
+	<div class="main_wrapper">
+		<div class="login_main" ng-controller="OrderInfo">
+			<div class="ionic-logo">
+				<img src="img/login_logo.png" />
+			</div>
+			<div class="login">
+				<form name="myForm">
+					<table width="100%" border="1">
+					  <tr style="background: #f2f4eb;">
+					    <th scope="col" width="50%"><p>Item</p></th>
+					    <th scope="col" width="20%"><p>Price</p></th>
+					    <th scope="col" width="10%"><p>Quantity</p></th>
+					    <th scope="col" width="20%"><p>Subtotal</p></th>
+					  </tr>
+					  <tr ng-repeat="cProducts in cartProducts">
+					    <td width="50%"><p>{{cProducts.product_name}}</p></td>
+					    <td width="20%" id="unit_price"><p>$ {{cProducts.product_price}}</p></td>
+					    <td width="10%"><p><input ng-blur="changequantiy($index)" type="text" id="quantity" style="font-size: 12px;" ng-model='cProducts.cart.quantity' /></p></td>
+					    <td width="20%" id="product_total"><p id="subprice{{cProducts.product_id}}">$ {{cProducts.product_price}}</p></td>
+					  </tr>
+					   <tr >
+					    <th scope="col" colspan="3" width="80%"><p style="text-align: right;">Shipping Price</p></th>
+					    <th scope="col" width="20%"><p>$ {{shippingOject.shipping_rate_value}}</p></th>
+					  </tr>
+					  <tr >
+					    <th scope="col" colspan="3" width="80%"><p style="text-align: right;">Total</p></th>
+					    <th scope="col" width="20%"><p>$ {{totalamount}}</p></th>
+					  </tr>
+					</table>	
+					<div class="padding">
+						<button class="button button-block button-yellow" style="color: #000" ng-click="goPage('submit')">
+							Pay Now
+						</button>
+						<button class="button button-block button-yellow" style="color: #000" ng-click="goPage('cart')">
+							Cancel
+						</button> 
+						
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</content>

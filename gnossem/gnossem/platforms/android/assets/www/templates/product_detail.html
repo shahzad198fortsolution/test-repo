@@ -1,0 +1,215 @@
+<div id="content"  ng-controller="HomeController">
+		<side-menus >
+		<div ng-controller="ProductDetailController" >
+			<pane side-menu-content>
+				<div class="bar bar-header bar-dark" >
+					<button class="button button-icon icon ion-navicon-round" ng-click="openLeft()"></button>
+					<div class="logo">
+						Gnossem
+					</div>
+					<div class="cart_wishlist"  ng-controller="CartController">
+						<div class="cart_btn">
+							<button class="button button-icon icon ion-ios7-cart" ng-click="addToCart(productDetail)"></button>
+						</div>
+						<div class="wishlist_btn">
+							<button class="button button-icon icon ion-heart" ng-click="addToWishList(productDetail)"></button>
+						</div>
+					</div>
+				</div>
+				<content has-header="true" has-tabs="true" >
+					<div class="product_detail_img" >
+						<div class="product_image_1">
+						 <slide-box show-pager="false" does-continue="false" active-slide="0" slide-interval="1000" disable-scroll="false" on-slide-changed="wasim()">								
+						        <slide >
+						            <img src="http://images.gnossem.com/components/com_virtuemart/shop_image/product/{{productDetail.product_full_image}}">
+						        </slide>
+						        <slide id="id0">
+						            <img src="{{productImages[0].file_url}}">
+						        </slide>
+						         <slide id="id1">
+						            <img src="{{productImages[1].file_url}}">
+						        </slide >
+						        <slide id="id2" >
+						            <img src="{{productImages[2].file_url}}">
+						        </slide>
+						       
+								 <slide id="id3">
+										<img src="{{productImages[3].file_url}}">
+									</slide>
+									 <slide id="id4">
+										<img src="{{productImages[4].file_url}}">
+									</slide>
+									<slide id="id5">
+										<img src="{{productImages[5].file_url}}">
+									</slide>
+									<slide id="id6">
+										<img src="{{productImages[6].file_url}}">
+									</slide>
+								
+						    </slide-box>
+						    </div>
+						<!-- <div class="product_image_1">
+							<img  alt="img/product_loading.gif" src="http://images.gnossem.com/components/com_virtuemart/shop_image/product/{{productDetail.product_full_image}}" />
+						</div> -->
+						<div class="clear"></div>
+						<div class="product_name_1" >
+							<a ng-click='openModal()'>
+							<p class="product_detail_grey">
+								{{productDetail.product_name}}
+							</p>
+							<p class="product_detail_grey_1">
+								$ {{productDetail.product_price}}
+							</p>
+							</a>
+						</div>
+					</div>
+				</content>
+
+	<div class="tabs tabs-icon-top bar-dark" style="background: #444444">
+		<ul class="footer">
+			<li>
+				<a > <img src="img/about_btn.png"> </a>
+			</li>
+			<li>
+				<a > <img src="img/shop_new_btn.png"> </a>
+			</li>
+			<li>
+				<a > <img src="img/shop_premium_btn.png"> </a>
+			</li>
+		</ul>
+	</div>
+<!-- ng-click="goPage('subdetail')" -->
+	</pane>
+	<side-menu side="left">
+		<content >
+			<div class="menu_bg">
+				<div class="menu_inner">
+					<ul>
+						<a ng-click="goPage('home')">
+						<li>
+							<div class="home_icon"><img src="img/home_icon.png" />
+							</div>
+							<div class="home">
+								HOME
+							</div>
+						</li> </a>
+						<a ng-click='goPage("top")'>
+						<li>
+							<div class="home_icon"><img src="img/new_icon.png" />
+							</div>
+							<div class="home">
+								New
+							</div>
+						</li> </a>
+						<a ng-click='goPage("designers")'>
+						<li>
+							<div class="home_icon"><img src="img/designer_icon.png" />
+							</div>
+							<div class="home">
+								designer
+							</div>
+						</li> </a>
+						<a ng-click='goPage(14)'>
+						<li>
+							<div class="home_icon"><img src="img/women_icon.png" />
+							</div>
+							<div class="home">
+								women
+							</div>
+						</li> </a>
+						<a ng-click='goPage(39)'>
+						<li>
+							<div class="home_icon"><img src="img/bags_icon.png" />
+							</div>
+							<div class="home">
+								bags
+							</div>
+						</li> </a>
+						<a ng-click='goPage(80)'>
+						<li>
+							<div class="home_icon"><img src="img/shoes_icon.png" />
+							</div>
+							<div class="home">
+								shoes
+							</div>
+						</li> </a>
+						<a ng-click='goPage(32)'>
+						<li>
+							<div class="home_icon"><img src="img/accessories_icon.png" />
+							</div>
+							<div class="home">
+								Accesories
+							</div>
+						</li> </a>
+						<a ng-click='goPage(13)'>
+						<li>
+							<div class="home_icon"><img src="img/man_icon.png" />
+							</div>
+							<div class="home">
+								men
+							</div>
+						</li> </a>
+						<a >
+						<li>
+							<div class="home_icon"><img src="img/designer_icon.png" />
+							</div>
+							<div class="home">
+								style
+							</div>
+						</li> </a>
+						<a >
+						<li>
+							<div class="home_icon"><img src="img/sale_icon.png" />
+							</div>
+							<div class="home">
+								sale
+							</div>
+						</li> </a>
+						<a >
+						<li>
+							<div class="home_icon"><img src="img/search_icon.png" />
+							</div>
+							<div class="home">
+								search
+							</div>
+						</li> 
+						</a>
+						 <a ng-click='logout()'>
+				        <li>
+				          <div class="home_icon"><img src="img/logout_icon.png" /></div>
+				          <div class="home"> logout </div>
+				        </li>
+				        </a>
+					</ul>
+				</div>
+			</div>
+		</content>
+	</side-menu>
+	</div>
+	</side-menus>
+</div>
+<script id="modal.html" type="text/ng-template">
+  <div class="modal" ng-controller="PDetailController">
+    <ion-content has-header="true" padding="true">
+    <div class="product_name_1" style="padding-top: 50px" ng-click="closeModal()">
+		<p class="product_detail_grey">
+			{{productDetail.product_name}}
+		</p>
+		<p class="product_detail_grey_1">
+			$ {{productDetail.product_price}}
+		</p>
+	</div>
+        <div>
+          <ul >
+		   	 <li ng-repeat="item in items">
+		     	<div style="width: 100%; border: 2px; background: #FFFFFF; border-bottom: #CCCCCC 1px solid;"  ng-click="toggleDetail($index)"> <p style="padding: 5%;font-size: 14px;">{{item.heading}}</p></div>
+		     	<div ng-show="activePosition == $index" style="width: 100%;background: #ccc;border-bottom: #000000 1px solid;"> 
+		     		<div style="padding: 5%;font-size: 14px;border-bottom: #000000 1px solid;" ><p style="font-size: 13px; line-height: 21px;" ng-bind-html='item.value'></p></div>
+		     	</div>
+		    </li>
+		</ul>	
+        </div>
+      </div>
+    </ion-content>
+  </div>
+</script>

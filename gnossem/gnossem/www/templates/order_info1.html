@@ -1,0 +1,30 @@
+<content >	
+<div class="main_wrapper">
+	<div class="login_main" ng-controller="OrderInfo1">
+		<div class="ionic-logo">
+			<img src="img/login_logo.png" />
+		</div>
+		<div class="login">
+			<form name="myForm">
+			<div class="list">
+			  <label class="item item-input">
+			    <input type="text" placeholder="First Name" ng-model='info1.firstname'>*
+			  </label>
+			  <label class="item item-input">
+			    <input type="text" placeholder="Last Name" ng-model='info1.lastname' >*
+			  </label>
+			  <label class="item item-input">
+			    <input type="email" placeholder="Email" ng-model='info1.email' >*
+			  </label>
+			</div>
+			<div class="padding">
+        		<button class="button button-block button-yellow" style="color: #000" ng-click="goStep2Page()">Next</button>
+        		<button class="button button-block button-yellow" style="color: #000" ng-click="goPage('cart')">Cancel</button> 
+        		
+      		</div>
+			</form>
+		</div>
+	</div>
+	<div class="clear"></div>
+</div>
+</content>

@@ -1,0 +1,388 @@
+
+<div id="content"  ng-controller="ProductFilterController">
+<side-menus>
+        <pane side-menu-content>
+<div class="bar bar-header bar-dark">
+	<button class="button button-icon icon ion-navicon-round" ng-click="openLeft()"></button>
+	<div class="logo"> Gnossem </div> 
+  	<div class="cart_wishlist">
+	  <div class="cart_btn"> 
+	  	<button class="button button-icon icon ion-ios7-cart" ng-click="goCartPage()"></button>
+	  	</div>
+	  <div class="wishlist_btn"> 
+	  	<button class="button button-icon icon ion-heart" ng-click="goPage('wishlist')"></button>
+	  </div>
+	</div>
+</div>
+<div class="bar bar-subheader bar-gray">
+	<div class="product_drowdown_main_text"> By Type </div>
+	<div ng-click="showHideFilterBox()" class="product_drowdown_main">
+		<img src="img/product_drowdown_main.png">
+	</div>
+
+</div>
+	
+	<!-----------------------------------start bags fiter----------------------------------------------->
+	
+<div id="bag_fiter" style="display: none">
+  <content has-header="true" has-tabs="true" has-subheader="true" style="z-index: 99999">
+  <div class="dropdown_inner">
+    <div class="product_drowdown_select_box_main">
+      <div class="product_drowdown_select_box">
+        <div class="product_drowdown_category_1"> 
+        	<ul>
+            <li ng-click="fiterBags('All Bags')"> <a > All Bags </a></li>
+            <li ng-click="fiterBags('Clutches')"> <a > Clutches </a> </li>
+            <li ng-click="fiterBags('Cardholders')"> <a > Cardholders </a> </li>
+            <li ng-click="fiterBags('Leather')"> <a > Leather </a> </li>
+            <li ng-click="fiterBags('Ostrich')"> <a > Ostrich </a> </li>
+            <li ng-click="fiterBags('Python')"> <a > Python </a> </li>
+          </ul>
+        </div>
+        <div class="line_1"></div>
+        <div class="product_drowdown_category_2"> <span class="product_drowdown_heading_2">By Price</span>
+          <ul>
+            <li ng-click="fiterBags('Sale')"> <a > Sale </a> </li>
+            <li ng-click="fiterBags('Less Than S$80')"> <a > Less Than S$80 </a> </li>
+            <li ng-click="fiterBags('Less Than S$150')"> <a > Less Than S$150 </a> </li>
+            <li ng-click="fiterBags('Less Than S$300')"> <a > Less Than S$300 </a> </li>
+          </ul>
+        </div>
+        <div class="line_1"></div>
+        <div class="product_drowdown_category_2"> <span class="product_drowdown_heading_2">By Style</span>
+          <ul>
+            <li ng-click="fiterBags('Editors Picks')"> <a > Editor's Picks </a> </li>
+            <li ng-click="fiterBags('Boho Chick')"> <a > Boho Chick </a> </li>
+            <li ng-click="fiterBags('Glam')"> <a > Glam </a> </li>
+            <li ng-click="fiterBags('Eclectic')"> <a > Eclectic </a> </li>
+            <li ng-click="fiterBags('Minimalist')"> <a > Minimalist </a> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+  </content>
+</div>
+
+<!-----------------------------------End bags fiter----------------------------------------------->
+
+
+	
+<!-----------------------------------End Women fiter----------------------------------------------->
+
+<div id="women_filter" style="display: none">
+<content has-header="true" has-tabs="true" has-subheader="true" style="z-index: 99999">
+  <div class="dropdown_inner">
+    <div class="product_drowdown_select_box_main" >
+      <div class="product_drowdown_select_box">
+        <div class="product_drowdown_category_1"> <span class="product_drowdown_heading">By Category</span>
+          <ul>
+            <li ng-click="fiterwomen('Accessories')" > <a > Accessories </a> </li>
+            <li ng-click="fiterwomen('Tops')" > <a > Tops </a> </li>
+            <li ng-click="fiterwomen('Bottoms')"> <a > Bottoms </a> </li>
+            <li ng-click="fiterwomen('Dresses')" > <a > Dresses </a> </li>
+            <li ng-click="fiterwomen('Beachwear')"> <a > Beachwear </a> </li>
+            <li ng-click="fiterwomen('Bags')"> <a > Bags </a> </li>
+            <li ng-click="fiterwomen('Shoes')"> <a > Shoes </a> </li>
+          </ul>
+        </div>
+        <div class="line_1"></div>
+        <div class="product_drowdown_category_2"> <span class="product_drowdown_heading_2">By Designer</span>
+          <ul>
+            <li ng-click="fiterwomen('Newly Added')"> <a > Newly Added </a> </li>
+            <li ng-click="fiterwomen('Newly Added')"> <a > Newly Added </a> </li>
+            <li ng-click="fiterwomen('Most Popular')"> <a > Most Popular </a> </li>
+            <li ng-click="fiterwomen('By Country')"> <a > By Country </a> </li>
+            <li ng-click="fiterwomen('View All')"> <a > View All </a> </li>
+          </ul>
+        </div>
+        <div class="line_1"></div>
+        <div class="product_drowdown_category_2"> <span class="product_drowdown_heading_2">By Style</span>
+          <ul>
+            <li ng-click="fiterwomen('Editors Picks')"> <a > Editor's Picks </a> </li>
+            <li ng-click="fiterwomen('Boho Chic')"> <a > Boho Chic </a> </li>
+            <li ng-click="fiterwomen('Glam')"> <a > Glam </a> </li>
+            <li ng-click="fiterwomen('Eclectic')"> <a > Eclectic </a> </li>
+            <li ng-click="fiterwomen('Minimalist')"> <a > Minimalist </a> </li>
+            <li ng-click="fiterwomen('Grunge')"> <a > Grunge </a> </li>
+          </ul>
+        </div>
+         <div class="line_1"></div>
+        <div class="product_drowdown_category_2"> <span class="product_drowdown_heading_2">BY PRICE</span>
+          <ul>
+            <li ng-click="fiterwomen('Sale')"> <a > Sale </a> </li>
+            <li ng-click="fiterwomen('Less Than S$50')" > <a > Less than S$50 </a> </li>
+            <li ng-click="fiterwomen('Less Than S$100')"> <a > Less than S$100 </a> </li>
+            <li ng-click="fiterwomen('Less Than S$200')"> <a > Less than S$200 </a> </li>
+            <li ng-click="fiterwomen('Less Than S$300')"> <a > Less than S$300 </a> </li>
+          </ul>
+        </div>
+        <div class="line_1"></div>
+        <div class="product_drowdown_category_2"> <span class="product_drowdown_heading_2">BY BODY TYPE</span>
+          <ul>
+            <li ng-click="fiterwomen('Pear Shape')"> <a > Pear Shape </a> </li>
+            <li ng-click="fiterwomen('Apple Shape')"> <a > Apple Shape </a> </li>
+            <li ng-click="fiterwomen('Hourglass Shape')"> <a > Hourglass Shape </a> </li>
+            <li ng-click="fiterwomen('Athletic Shape')"> <a > Athletic Shape </a> </li>
+            <li ng-click="fiterwomen('Banana Shape')"> <a > Banana Shape </a> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+ </content>
+</div>
+
+<!-----------------------------------End Women fiter----------------------------------------------->
+
+
+
+<!-----------------------------------Start Men fiter----------------------------------------------->
+
+<div id="men_fiter" style="display: none">
+	<content has-header="true" has-tabs="true" has-subheader="true" style="z-index: 99999">
+  <div class="dropdown_inner">
+    <div class="product_drowdown_select_box_main">
+      <div class="product_drowdown_select_box">
+        <div class="product_drowdown_category_1"> <span class="product_drowdown_heading">BY CATEGORY</span>
+          <ul>
+            <li ng-click="fitermen('All Menswear')"> <a > All Menswear </a> </li>
+            <li ng-click="fitermen('Shirts')"> <a > Shirts </a> </li>
+            <li ng-click="fitermen('T-Shirts')"> <a > T-Shirts </a> </li>
+            <li ng-click="fitermen('Shorts')"> <a > Shorts </a> </li>
+            <li ng-click="fitermen('Trousers')"> <a > Trousers </a> </li>
+            <li ng-click="fitermen('Jackets')"> <a > Jackets </a> </li>
+             <li> <a ng-click="fitermen('Accessories')"> Accessories </a> </li>
+          </ul>
+        </div>
+        <div class="line_1"></div>
+        <div class="product_drowdown_category_2"> <span class="product_drowdown_heading_2">BY PRICE</span>
+          <ul>
+            <li ng-click="fitermen('Sale')"> <a > Sale </a> </li>
+            <li ng-click="fitermen('Less Than S$50')"> <a > Less Than S$50 </a> </li>
+            <li ng-click="fitermen('Less Than S$100')"> <a > Less Than S$100 </a> </li>
+            <li ng-click="fitermen('Less Than S$200')"> <a > Less Than S$200 </a> </li>
+            <li ng-click="fitermen('Less Than S$300')"> <a > Less Than S$300 </a> </li>
+          </ul>
+        </div>
+        <div class="line_1"></div>
+        <div class="product_drowdown_category_2"> <span class="product_drowdown_heading_2">GIFTS FOR HIM</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+ </content>
+</div>
+
+<!-----------------------------------End Men fiter----------------------------------------------->
+
+
+
+<!-----------------------------------Start Accessoriesfiter----------------------------------------------->
+
+<div id="Accessory_fiter" style="display: none">
+	<content has-header="true" has-tabs="true" has-subheader="true" style="z-index: 99999">
+  <div class="dropdown_inner">
+    <div class="product_drowdown_select_box_main">
+      <div class="product_drowdown_select_box">
+        <div class="product_drowdown_category_1"> <span class="product_drowdown_heading">By Type</span>
+          <ul>
+            <li ng-click="fiterAccessory('All Accessories')"> <a > All Accessories </a> </li>
+            <li ng-click="fiterAccessory('Bangles & Cuffs')"> <a > Bangles & Cuffs </a> </li>
+            <li ng-click="fiterAccessory('Jewelry')"> <a > Jewelry </a> </li>
+            <li ng-click="fiterAccessory('Rings')"> <a > Rings </a> </li>
+            <li ng-click="fiterAccessory('Necklaces')"> <a > Necklaces </a> </li>
+            <li ng-click="fiterAccessory('Earrings')"> <a > Earrings </a> </li>
+            <li ng-click="fiterAccessory('Bracelets')"> <a > Bracelets </a> </li>
+            <li ng-click="fiterAccessory('Body Jewelry')"> <a > Body Jewelry </a> </li>
+            <li ng-click="fiterAccessory('Belts')"> <a > Belts </a> </li>
+            <li ng-click="fiterAccessory('Scarves')"> <a > Scarves </a> </li>
+          </ul>
+        </div>
+        <div class="line_1"></div>
+        <div class="product_drowdown_category_2"> <span class="product_drowdown_heading_2">By Price</span>
+          <ul>
+            <li ng-click="fiterAccessory('Sale')"> <a > Sale </a> </li>
+            <li ng-click="fiterAccessory('Less Than S$80')"> <a > Less Than S$80 </a> </li>
+            <li ng-click="fiterAccessory('Less Than S$150')"> <a > Less Than S$150 </a> </li>
+            <li ng-click="fiterAccessory('Less Than S$300')"> <a > Less Than S$300 </a> </li>
+          </ul>
+        </div>
+        <div class="line_1"></div>
+        <div class="product_drowdown_category_2"> <span class="product_drowdown_heading_2">By Style</span>
+          <ul>
+            <li ng-click="fiterAccessory('Sale')"> <a > Sale </a> </li>
+            <li ng-click="fiterAccessory('Editors Pick')"> <a > Editor's Pick </a> </li>
+            <li ng-click="fiterAccessory('Semi-Precious Stones')"> <a > Semi-Precious Stones </a> </li>
+            <li ng-click="fiterAccessory('Celebrity Endorsed')"> <a > Celebrity Endorsed </a> </li>
+            <li ng-click="fiterAccessory('Minimalist')"> <a > Minimalist </a> </li>
+            <li ng-click="fiterAccessory('Gold')"> <a > Gold </a> </li>
+            <li ng-click="fiterAccessory('Edgy')"> <a > Edgy </a> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+ </content>
+</div>
+
+
+<!-----------------------------------End Accessories fiter----------------------------------------------->
+
+
+<!-----------------------------------Start Shoes fiter----------------------------------------------->
+
+<div id="shoes_fiter" style="display: none">
+	<content has-header="true" has-tabs="true" has-subheader="true" style="z-index: 99999">
+  <div class="dropdown_inner">
+    <div class="product_drowdown_select_box_main">
+      <div class="product_drowdown_select_box">
+        <div class="product_drowdown_category_1"> <span class="product_drowdown_heading">By Type</span>
+          <ul>
+            <li ng-click="fitershoes('All Shoes')"> <a > All Shoes </a> </li>
+            <li ng-click="fitershoes('Editors Picks')"> <a > Editor's Picks </a> </li>
+            <li ng-click="fitershoes('Less than S$ 200')"> <a > Less than S$ 200 </a> </li>
+            <li ng-click="fitershoes('Exclusive')"> <a > Exclusive </a> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+ </content>
+</div>
+
+
+<!-----------------------------------End Shoes fiter----------------------------------------------->
+
+
+<content has-header="true" has-tabs="true" has-subheader="true">
+	
+	<div class="bags_page" >
+    	<ul >
+		   	 <li ng-repeat="bag in bags">
+		     <a ng-click="productDetail(bag.product_id)"> 
+	          <div class="first_bag">
+	          	<div class="img loading" lazy-loading-class="loading" lazy-loaded-class="loaded" lazy-background="'http://images.gnossem.com/components/com_virtuemart/shop_image/product/{{bag.product_full_image}}'">
+	          		<img  src="img/product_bg.png" />
+	          	</div>
+	          	 <!-- <div class="first_bag"> <img  src="http://images.gnossem.com/components/com_virtuemart/shop_image/product/{{bag.product_full_image}}" /> </div>  -->
+	            <div class="bags-name">
+	              <p class="grey_color"> {{bag.product_name}} </p>
+	              <p class="black_color"> $ {{bag.product_price}}</p>
+	            </div> 
+	          </div>
+	         </a>       
+		    </li>
+		</ul>
+	</div>
+</content>
+<div class="tabs tabs-icon-top bar-dark" style="background: #444444">
+  <ul class="footer">
+	<li>
+		<a >
+		<img src="img/about_btn.png">
+		</a>
+	</li>
+	<li>
+		<a >
+		<img src="img/shop_new_btn.png">
+		</a>
+	</li>
+	<li>
+		<a >
+		<img src="img/shop_premium_btn.png">
+		</a>
+	</li>
+</ul>
+</div>
+
+</pane>
+<side-menu side="left">
+          <content >
+            <div class="menu_bg">
+    <div class="menu_inner">
+      <ul>
+        <a ng-click="goPage('home')">
+        <li>
+          <div class="home_icon"><img src="img/home_icon.png" /></div>
+          <div class="home"> HOME </div>
+        </li>
+        </a>
+        <a ng-click='goPage("top")'>
+        <li>
+          <div class="home_icon"><img src="img/new_icon.png" /></div>
+          <div class="home"> New </div>
+        </li>
+        </a>
+        <a ng-click='goPage("designers")'>
+        <li>
+          <div class="home_icon"><img src="img/designer_icon.png" /></div>
+          <div class="home"> designer </div>
+        </li>
+        </a>
+        <a >
+        <li>
+          <div class="home_icon"><img src="img/women_icon.png" /></div>
+          <div class="home"> women </div>
+        </li>
+        </a>
+        <a >
+        <li>
+          <div class="home_icon"><img src="img/bags_icon.png" /></div>
+          <div class="home"> bags </div>
+        </li>
+        </a>
+        <a >
+        <li>
+          <div class="home_icon"><img src="img/shoes_icon.png" /></div>
+          <div class="home"> shoes </div>
+        </li>
+        </a>
+        <a >
+        <li>
+          <div class="home_icon"><img src="img/accessories_icon.png" /></div>
+          <div class="home"> Accesories </div>
+        </li>
+        </a>
+        <a >
+        <li>
+          <div class="home_icon"><img src="img/man_icon.png" /></div>
+          <div class="home"> men </div>
+        </li>
+        </a>
+        <a >
+        <li>
+          <div class="home_icon"><img src="img/designer_icon.png" /></div>
+          <div class="home"> style </div>
+        </li>
+        </a>
+        <a >
+        <li>
+          <div class="home_icon"><img src="img/sale_icon.png" /></div>
+          <div class="home"> sale </div>
+        </li>
+        </a>
+        <a >
+        <li>
+          <div class="home_icon"><img src="img/search_icon.png" /></div>
+          <div class="home"> search </div>
+        </li>
+        </a>
+         <a ng-click='logout()'>
+        <li>
+          <div class="home_icon"><img src="img/logout_icon.png" /></div>
+          <div class="home"> logout </div>
+        </li>
+        </a>
+      </ul>
+    </div>
+  </div>
+  </content>
+</side-menu>
+</side-menus>
+</div>

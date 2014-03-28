@@ -1,0 +1,45 @@
+<content scroll="true"  overflow-scroll="true">	
+<div class="main_wrapper">
+	<div class="login_main" ng-controller="OrderInfo2">
+		<div class="ionic-logo">
+			<img src="img/login_logo.png" />
+		</div>
+		<div class="login">
+			<form name="myForm">
+			<div class="logininputwraper">
+			  <label class="item item-input">
+			    <input type="text" placeholder="Phone" ng-model='info2.phone'>*
+			  </label>
+			  <label class="item item-input">
+			    <input type="text" placeholder="Mobile Phone" ng-model='info2.mobile' >
+			  </label>
+			  <label class="item item-input">
+			    <input type="text" placeholder="Country" ng-model='info2.country' >*
+			  </label>
+			  <label class="item item-input">
+			    <input type="text" placeholder="Address 1" ng-model='info2.address1' >*
+			  </label>
+			  <label class="item item-input">
+			    <input type="text" placeholder="Address 2" ng-model='info2.address2' >
+			  </label>
+			  <label class="item item-input">
+			    <input type="text" placeholder="State/Province/Region" ng-model='info2.state' >*
+			  </label>
+			  <label class="item item-input">
+			    <input type="text" placeholder="City" ng-model='info2.city'>*
+			  </label>
+			  <label class="item item-input">
+			    <input type="text" placeholder="Zip/Postal Code" ng-model='info2.zipcode' >*
+			  </label>
+			</div>
+			<div class="padding">
+        		<button class="button button-block button-yellow" style="color: #000" ng-click="goStep3Page()">Next</button>
+        		<button class="button button-block button-yellow" style="color: #000" ng-click="goPage('cart')">Cancel</button>
+        		
+      		</div>
+			</form>
+		</div>
+	</div>
+	<div class="clear"></div>
+</div>
+</content>

@@ -1,0 +1,26 @@
+<div class="main_wrapper">
+	<div class="login_main" ng-controller="Login">
+		<div class="ionic-logo">
+			<img src="img/login_logo.png" />
+		</div>
+		<div class="login">
+			<form name="myForm">
+			<div class="logininputwraper" >
+			  <label class="item item-input">
+			    <input type="text" placeholder="Email" ng-model="user.username">
+			  </label>
+			  <label class="item item-input">
+			    <input type="password" placeholder="Password" ng-model="user.passwordp" >
+			  </label>
+			  <p>
+        		<button class="button button-clear button-forgotpwd">Forgot Password ?</button>
+      		  </p>
+			</div>
+			<div class="padding">
+        		<button class="button button-block button-yellow" style="color: #000" ng-click='login(user)'>Sign in</button>
+        		<button class="button button-block button-yellow" style="color: #000" ng-click='gonext()'>Sign Up</button>
+      		</div>
+			</form>
+		</div>
+	</div>
+</div>
